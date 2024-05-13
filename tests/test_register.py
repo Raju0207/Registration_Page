@@ -1,10 +1,19 @@
 import time
-
 from tests.base_test import Base_Test
 from pages.registration_page import Registration_Page
-
+from testdata.data import Data
 
 class Registration_Test(Base_Test):
+    def test_registration_data(self):
+        rp = Registration_Page(self.driver)
+        rp.enter_first_name(Data.FIRSTNAME)
+        time.sleep(2)
+        rp.enter_last_name(Data.LASTNAME)
+        time.sleep(2)
+        rp.enter_address(Data.ADDRESS)
+        time.sleep(3)
+        rp.enter_email(Data.Email)
+        time.sleep(3)
 
     def test_radio_button(self):
         rp = Registration_Page(self.driver)

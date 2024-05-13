@@ -1,5 +1,6 @@
 from pages.base_page import Base_Page
 from locators.locators import Locators
+from validate_email import validate_email
 
 
 class Registration_Page(Base_Page):
@@ -8,6 +9,27 @@ class Registration_Page(Base_Page):
         super().__init__(driver)
         self.driver = driver
         self.locator = Locators
+
+    def enter_first_name(self):
+        self.get_element(self.locator.firstName)
+
+    def enter_last_name(self):
+        self.get_element(self.locator.lastName)
+
+    def enter_address(self):
+        self.get_element(self.locator.address)
+
+    def enter_email(self):
+        self.get_element(self.locator.emailAddress)
+
+    def is_valid_email(self):
+        return validate_email(self)
+
+    email = "example@example.com"
+    if is_valid_email(email):
+        print("Valid email address")
+    else:
+        print("Invalid email address")
 
     def select_male(self):
         self.click_element(self.locator.maleRadioButton)

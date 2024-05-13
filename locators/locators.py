@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class Locators:
+    # Locators for Login
     userName = (By.ID, 'user-name')
     password = (By.ID, 'password')
     submitButton = (By.ID, 'login-button')
@@ -14,6 +15,12 @@ class Locators:
     userName2 = (By.ID, 'user-name')
     password2 = (By.ID, 'password')
 
+    # Locators for Registration
+    firstName = By.XPATH, '(//input[@placeholder= "First Name"])'
+    lastName = By.XPATH, '(//input[@placeholder= "Last Name"])'
+    address = By.XPATH, '(//textarea[@class="form-control ng-pristine ng-valid ng-touched"])'
+    emailAddress = By.XPATH, '(//input[@type="email"])'
+    phone = By.XPATH, '(//input[@type="tel"])'
     maleRadioButton = By.XPATH, '(//input[@name="radiooptions"])[1]'
     feMaleRadioButton = By.XPATH, '(//input[@name="radiooptions"])[2]'
 

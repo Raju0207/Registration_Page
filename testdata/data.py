@@ -5,3 +5,7 @@ class Data:
     PASSWORD1 = ""
     USERNAME2 = "standard_usersdsa"
     PASSWORD2 = "secret_sauce123"
+    FIRSTNAME = "MD"
+    LASTNAME = "LEON"
+    ADDRESS = "Mirpur-10, Dhaka, Bangladesh."
+    Email = "leon@gamil.com"
