@@ -3,6 +3,7 @@ from tests.base_test import Base_Test
 from pages.registration_page import Registration_Page
 from testdata.data import Data
 
+
 class Registration_Test(Base_Test):
     def test_registration_data(self):
         rp = Registration_Page(self.driver)

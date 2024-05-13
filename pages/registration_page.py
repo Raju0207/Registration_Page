@@ -10,8 +10,8 @@ class Registration_Page(Base_Page):
         self.driver = driver
         self.locator = Locators
 
-    def enter_first_name(self):
-        self.get_element(self.locator.firstName)
+    def enter_first_name(self, firstname):
+        self.enter_at(self.locator.firstName, firstname)
 
     def enter_last_name(self):
         self.get_element(self.locator.lastName)
