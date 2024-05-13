@@ -13,14 +13,14 @@ class Registration_Page(Base_Page):
     def enter_first_name(self, firstname):
         self.enter_at(self.locator.firstName, firstname)
 
-    def enter_last_name(self):
-        self.get_element(self.locator.lastName)
+    def enter_last_name(self, lastname):
+        self.enter_at(self.locator.lastName, lastname)
 
-    def enter_address(self):
-        self.get_element(self.locator.address)
+    def enter_address(self, address):
+        self.enter_at(self.locator.address, address)
 
-    def enter_email(self):
-        self.get_element(self.locator.emailAddress)
+    def enter_email(self, email):
+        self.enter_at(self.locator.emailAddress, email)
 
     def is_valid_email(self):
         return validate_email(self)
