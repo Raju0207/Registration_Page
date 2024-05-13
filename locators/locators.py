@@ -18,8 +18,8 @@ class Locators:
     # Locators for Registration
     firstName = By.XPATH, '(//input[@placeholder= "First Name"])'
     lastName = By.XPATH, '(//input[@placeholder= "Last Name"])'
-    address = By.XPATH, '(//textarea[@class="form-control ng-pristine ng-valid ng-touched"])'
-    emailAddress = By.XPATH, '(//input[@type="email"])'
+    address = By.XPATH, '//textarea[@ng-model="Adress"]'
+    emailAddress = By.XPATH, '//input[@type="email"]'
     phone = By.XPATH, '(//input[@type="tel"])'
     maleRadioButton = By.XPATH, '(//input[@name="radiooptions"])[1]'
     feMaleRadioButton = By.XPATH, '(//input[@name="radiooptions"])[2]'
@@ -27,4 +27,10 @@ class Locators:
     cricket = By.ID, 'checkbox1'
     movies = By.ID, 'checkbox2'
     hockey = By.ID, 'checkbox3'
+
+    language_dropdown = By.ID, 'msdd'
+    arabic = By.XPATH, '(//li[@class="ng-scope"])[1]'
+    languageText = By.XPATH, '//label[text()="Languages"]'
+
+    skills = By.ID, 'Skills'
 
