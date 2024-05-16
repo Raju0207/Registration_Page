@@ -26,6 +26,15 @@ class Registration_Page(Base_Page):
     def enter_email(self, email):
         self.enter_at(self.locator.emailAddress, email)
 
+    def enter_phone(self, phone):
+        self.enter_at(self.locator.phone, phone)
+
+    def enter_password(self, first_password):
+        self.enter_at(self.locator.first_password, first_password)
+
+    def enter_second_password(self, confirm_password):
+        self.enter_at(self.locator.confirm_password, confirm_password)
+
     # def is_valid_email(self):
     #     return validate_email(self)
     #

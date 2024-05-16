@@ -9,3 +9,6 @@ class Data:
     LASTNAME = "LEON"
     ADDRESS = "Mirpur-10, Dhaka, Bangladesh."
     Email = "leon@gamil.com"
+    PHONE = '01710380859'
+    FIRST_PASSWORD = '12345678'
+    CONFIRM_PASSWORD = '12345678'

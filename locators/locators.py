@@ -33,4 +33,5 @@ class Locators:
     languageText = By.XPATH, '//label[text()="Languages"]'
 
     skills = By.ID, 'Skills'
-
+    first_password = By.XPATH, '//input[@ng-model="Password"]'
+    confirm_password = By.XPATH, '//input[@ng-model="CPassword"]'
