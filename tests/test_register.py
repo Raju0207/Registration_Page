@@ -24,6 +24,8 @@ class Registration_Test(Base_Test):
         time.sleep(3)
         rp.enter_second_password(Data.CONFIRM_PASSWORD)
         time.sleep(3)
+        rp.upload_photo()
+        time.sleep(10)
 
     def test_radio_button(self):
         rp = Registration_Page(self.driver)

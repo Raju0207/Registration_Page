@@ -1,9 +1,13 @@
+import os
 import time
 
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
 from pages.base_page import Base_Page
 from locators.locators import Locators
+
+
 # from validate_email import validate_email
 
 
@@ -89,3 +93,9 @@ class Registration_Page(Base_Page):
         # select.select_by_value("Analytics")
         select.select_by_visible_text("Android")
 
+    def upload_photo(self):
+        upload_file = os.path.abspath(
+            os.path.join(os.path.dirname(__file__), "..", "images/photo.jpg"))
+        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+        file_input = self.get_element(self.locator.photo)
+        file_input.send_keys(upload_file)

@@ -12,3 +12,4 @@ class Data:
     PHONE = '01710380859'
     FIRST_PASSWORD = '12345678'
     CONFIRM_PASSWORD = '12345678'
+    UPLOAD_PHOTO = 'D:\selenium-unittest-pom\Registration_Page\image\photo.jpg'
