@@ -26,6 +26,12 @@ class Registration_Test(Base_Test):
         time.sleep(3)
         rp.upload_photo()
         time.sleep(10)
+        rp.select_year()
+        time.sleep(3)
+        rp.select_month()
+        time.sleep(3)
+        rp.select_day()
+        time.sleep(3)
 
     def test_radio_button(self):
         rp = Registration_Page(self.driver)

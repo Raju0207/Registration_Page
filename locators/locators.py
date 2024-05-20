@@ -36,3 +36,7 @@ class Locators:
     first_password = By.XPATH, '//input[@id = "firstpassword"]'
     confirm_password = By.XPATH, '//input[@id = "secondpassword"]'
     photo = By.XPATH, '//input[@id="imagesrc"]'
+
+    year = By.ID, 'yearbox'
+    month = By.XPATH, '//select[@ng-model="monthbox"]'
+    day = By.ID, 'daybox'

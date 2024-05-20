@@ -102,3 +102,15 @@ class Registration_Page(Base_Page):
         action = ActionChains(self.driver)
         action.scroll_to_element(file_input).perform()
         file_input.send_keys(upload_file)
+
+    def select_year(self):
+        select = Select(self.get_element(self.locator.year))
+        select.select_by_value('2000')
+
+    def select_month(self):
+        select = Select(self.get_element(self.locator.month))
+        select.select_by_value('April')
+
+    def select_day(self):
+        select = Select(self.get_element(self.locator.day))
+        select.select_by_value('20')
