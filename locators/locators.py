@@ -35,4 +35,4 @@ class Locators:
     skills = By.ID, 'Skills'
     first_password = By.XPATH, '//input[@id = "firstpassword"]'
     confirm_password = By.XPATH, '//input[@id = "secondpassword"]'
-    photo = By.XPATH, '//img[@id="imagetrgt"]'
+    photo = By.XPATH, '//input[@id="imagesrc"]'

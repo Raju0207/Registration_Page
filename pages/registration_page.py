@@ -1,6 +1,7 @@
 import os
 import time
 
+from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
@@ -95,7 +96,9 @@ class Registration_Page(Base_Page):
 
     def upload_photo(self):
         upload_file = os.path.abspath(
-            os.path.join(os.path.dirname(__file__), "..", "images/photo.jpg"))
-        self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            os.path.join(os.path.dirname(__file__), "..", "image/photo.jpg"))
+        # self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         file_input = self.get_element(self.locator.photo)
+        action = ActionChains(self.driver)
+        action.scroll_to_element(file_input).perform()
         file_input.send_keys(upload_file)
